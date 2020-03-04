@@ -9,20 +9,26 @@ namespace SweepStakes
     public class MarketingFirm 
     {
         private ISweepstakesManager _manager;
-        Stack<Sweepstakes> stack;
-        Queue<Sweepstakes> queue;
-        public int newId;
-
-        public MarketingFirm()
+        string name;
+        public string Name
         {
-            stack = new Stack<Sweepstakes>();
-            queue = new Queue<Sweepstakes>();
+            get
+            {
+                return Name;
+            }
+        }
+       
+
+        public MarketingFirm(ISweepstakesManager manager, string name)
+        {
+            _manager = manager;
+            this.name = name;
         }
 
-        public void PickSweepStakesManager()
+        public void CreateSweepStakes()
         {
-            void InsertSweepstakes(Sweepstakes sweepStakes);
-            Sweepstakes GetSweepStakes();
+            //void InsertSweepstakes(Sweepstakes sweepStakes);
+            //Sweepstakes GetSweepStakes();
         }
        
     }

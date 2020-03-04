@@ -12,8 +12,7 @@ namespace SweepStakes
         string Name { get; set;}
        // public int winner;
         Random random = new Random();
-       // public int registrationNumber;
-
+        // public int registrationNumber;       
         public Sweepstakes(string name)
         {
             this.Name = name;
@@ -31,13 +30,18 @@ namespace SweepStakes
         }
         public Contestant PickWinner()
         {
-
-            return ;
+            //need a random winner
+            int contestantWinner = random.Next(contestants.Count);
+            Contestant winner = new Contestant();
+            winner = contestants[contestantWinner];
+            return winner;
         }
-        public void PrintContestantInfo(Contestant contestant)
+        public void PrintContestantInfo(Contestant winner)
         {
-            Console.WriteLine($"The winner is" + contestant);
-            Console.ReadLine();
+            //winners info
+            Console.WriteLine("Congratulations to the Winner!\n\n");
+            Console.WriteLine($"The Winner is {winner.firstName} {winner.lastName} registration number {winner.registrationNumber}");
+            
         }
     }
 }
