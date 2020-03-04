@@ -29,9 +29,6 @@ namespace SweepStakes
         {
             Sweepstakes sweepstakes = new Sweepstakes(name);
             _manager.InsertSweepstakes(sweepstakes);
-            //RegisterContestant();
-            //PickWinner();
-            //PrintContestantInfo(winner);
         }
        
     }

@@ -11,7 +11,9 @@ namespace SweepStakes
         public void CreateMarketingFirmWithManager()
         {
             string sweepstakesName = Userinterface.GetNewSweepstakesName();
-            ISweepstakesManager sweepstakesManager = Userinterface.ChooseStackOrQueue();
+            string userInput = Userinterface.ChooseStackOrQueue();
+            SweepstakesFactory factory = new SweepstakesFactory();
+            ISweepstakesManager sweepstakesManager = factory.CreateFactory(userInput);
             MarketingFirm marketingFirm = new MarketingFirm(sweepstakesManager, sweepstakesName);
             marketingFirm.CreateSweepStakes();
         }

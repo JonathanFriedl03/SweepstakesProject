@@ -27,8 +27,7 @@ namespace SweepStakes
         }
         public static string ChooseStackOrQueue()
         {
-            Console.WriteLine("Please choose Stack or Queue!");
-            
+            Console.WriteLine("Please choose Stack or Queue!");           
             
                 string choice = (Console.ReadLine().ToLower());
                 if (choice == "stack" || choice == "queue")
@@ -40,9 +39,6 @@ namespace SweepStakes
                 Console.WriteLine("Your choice is invalid!");
                 Console.Clear();
             }return ChooseStackOrQueue();
-
-
-
         }
     }  
 }
