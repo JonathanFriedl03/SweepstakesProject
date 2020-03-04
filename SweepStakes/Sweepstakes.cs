@@ -8,9 +8,15 @@ namespace SweepStakes
 {
     class Sweepstakes
     {
-        private string name { get; set;}
+        string name;
         public string winner;
-        Dictionary<int, Contestnt> constestants;
+        Dictionary<int, Contestant> contestants;
+        Random random = new Random();
+        public int registrationNumber;
 
+        public void SweepStakes(string name)
+        {
+            this.name = name; 
+        }
     }
 }
