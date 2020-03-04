@@ -27,8 +27,11 @@ namespace SweepStakes
 
         public void CreateSweepStakes()
         {
-            //void InsertSweepstakes(Sweepstakes sweepStakes);
-            //Sweepstakes GetSweepStakes();
+            Sweepstakes sweepstakes = new Sweepstakes(name);
+            _manager.InsertSweepstakes(sweepstakes);
+            //RegisterContestant();
+            //PickWinner();
+            //PrintContestantInfo(winner);
         }
        
     }

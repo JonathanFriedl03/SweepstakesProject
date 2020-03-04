@@ -14,6 +14,7 @@ namespace SweepStakes
             string name;
             Console.WriteLine("Please enter your {0}", prompt);
             name = Console.ReadLine();
+            Console.Clear();
             return name;
         }
         public static string GetNewSweepstakesName()
@@ -21,27 +22,27 @@ namespace SweepStakes
             string sweepstakesName;
             Console.WriteLine("Please choose a name for your Sweepstakes.");
             sweepstakesName = Console.ReadLine();
+            Console.Clear();
             return sweepstakesName;
         }
-        public static int ChooseStackOrQueue()
+        public static string ChooseStackOrQueue()
         {
             Console.WriteLine("Please choose Stack or Queue!");
-            bool userInputIsAnInteger = false;
-            int stack = -1;
-
-            while (!userInputIsAnInteger || quantityOfItem < 0)
-            {
-
+            
+            
+                string choice = (Console.ReadLine().ToLower());
+                if (choice == "stack" || choice == "queue")
                 {
-                    Console.WriteLine("How many " + itemsToGet + " would you like to buy? " + "Each One cost $" + PricePerItem + " Your Inventory= " + numberOfAvailable + " Wallet= $" + moneyInWallet);
-                    Console.WriteLine("Please enter a positive whole number (or 0 to cancel):");
-                    userInputIsAnInteger = Int32.TryParse(Console.ReadLine(), out quantityOfItem);
+                    return choice;
                 }
+             else
+            {
+                Console.WriteLine("Your choice is invalid!");
+                Console.Clear();
+            }return ChooseStackOrQueue();
 
 
-            }
 
-            return quantityOfItem;
         }
     }  
 }

@@ -10,7 +10,10 @@ namespace SweepStakes
     {
         public void CreateMarketingFirmWithManager()
         {
-            string marketing
+            string sweepstakesName = Userinterface.GetNewSweepstakesName();
+            ISweepstakesManager sweepstakesManager = Userinterface.ChooseStackOrQueue();
+            MarketingFirm marketingFirm = new MarketingFirm(sweepstakesManager, sweepstakesName);
+            marketingFirm.CreateSweepStakes();
         }
     }
 }

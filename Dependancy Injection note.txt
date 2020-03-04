@@ -1,0 +1,2 @@
+I used dependency injection in my marketing firm class constructor. this was done to not have to pass in a specific type of manager "stack or queue", now
+both types are qualified. The purpose here is to allow the constructor to not have to be dependent upon one type of manager, again stack or queue.
